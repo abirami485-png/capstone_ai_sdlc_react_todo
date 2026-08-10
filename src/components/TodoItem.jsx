@@ -2,6 +2,7 @@ import { useState } from 'react';
 import CheckBoxIcon from '@mui/icons-material/CheckBox';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
+import dayjs from 'dayjs';
 import DialogTodoItem from './DialogTodoItem';
 
 const Task = ( { task, deleteHandler, checkHandler, editeHandler } ) => {
@@ -18,7 +19,11 @@ const Task = ( { task, deleteHandler, checkHandler, editeHandler } ) => {
                     className={`text-gray-700 font-medium ${task.status && 'line-through'} `} >
                         {task.title}
                 </span>
-                <span className="text-xs text-gray-700">{task.deadline.$d.toLocaleString()}</span>
+                <span className="text-xs text-gray-700">
+                    {task.deadline && dayjs.isDayjs(task.deadline) && task.deadline.isValid() 
+                        ? task.deadline.format('MMM D, YYYY h:mm A')
+                        : 'No deadline'}
+                </span>
             </div>
             <div className="">
                 <button onClick={() => deleteHandler(task._id)}
