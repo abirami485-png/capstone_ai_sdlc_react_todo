@@ -29,7 +29,7 @@ function App() {
 
     const [listTasks, setListTasks] = useState(() => {
         const loaded = loadTodosFromStorage();
-        return loaded ?? todoData;
+        return Array.isArray(loaded) ? loaded : todoData;
     });
     const [showListTasks, setShowListTasks] = useState([]);
     const [modeSort, setModeSort] = useState('All');
