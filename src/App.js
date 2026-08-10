@@ -88,6 +88,10 @@ function App() {
   }, [listTasks]);
 
   useEffect(() => {
+    saveTodosToStorage(listTasks);
+  }, [listTasks]);
+
+  useEffect(() => {
     if( modeSort === 'All') {
         setShowListTasks(
             listTasks
