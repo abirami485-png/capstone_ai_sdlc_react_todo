@@ -3,6 +3,7 @@ import './App.css';
 import Header from './components/Header';
 import Todos from './components/Todos';
 import dayjs from 'dayjs';
+import { loadTodosFromStorage, saveTodosToStorage } from './utils/todoStorage';
 
 function App() {
 
@@ -27,7 +28,10 @@ function App() {
         },
     ]
 
-  const [listTasks, setListTasks] = useState(todoData);
+  const [listTasks, setListTasks] = useState(() => {
+    const persisted = loadTodosFromStorage();
+    return Array.isArray(persisted) ? persisted : todoData;
+  });
   const [showListTasks, setShowListTasks] = useState([]);
   const [modeSort, setModeSort] = useState('All');
 
@@ -78,6 +82,10 @@ function App() {
   const handleSortList = (mode) => {
     setModeSort(mode);
   }
+
+  useEffect(() => {
+    saveTodosToStorage(listTasks);
+  }, [listTasks]);
 
   useEffect(() => {
     if( modeSort === 'All') {
