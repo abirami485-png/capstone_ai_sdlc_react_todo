@@ -82,7 +82,7 @@ export const loadTodosFromStorage = () => {
 
   const restored = [];
   for (const t of parsed.todos) {
-    if (!isValidTodo(t)) return null; // reject unusable payloads
+    if (!isValidTodo(t)) return null;
 
     restored.push({
       _id: t._id,
