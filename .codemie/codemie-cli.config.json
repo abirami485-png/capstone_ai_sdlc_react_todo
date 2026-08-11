@@ -1,0 +1,127 @@
+{
+  "version": 2,
+  "activeProfile": "default",
+  "profiles": {},
+  "codemieAssistants": [
+    {
+      "id": "48ebdd36-d863-4437-a003-b465c878fb53",
+      "name": "Technical Writer Assistant",
+      "slug": "technical-writer-assistant",
+      "description": "Generates project documentation, FRD, architecture documentation, README, release notes, and Confluence-ready content.",
+      "project": "abirami_ravichandran@epam.com",
+      "registeredAt": "2026-08-11T05:41:38.465Z",
+      "registrationMode": "agent",
+      "agentTargets": [
+        "claude"
+      ]
+    },
+    {
+      "id": "e8d08977-43a0-4278-b9f3-3e18ba831e24",
+      "name": "Deployment Engineer Assistant",
+      "slug": "deployment-engineer-assistant",
+      "description": "Deploys the human-approved build artifact of the React Todo application to the local environment, validates deployment and application availability, performs basic health verification, and prepares deployment notes before requesting Human Approval for documentation.",
+      "project": "abirami_ravichandran@epam.com",
+      "registeredAt": "2026-08-11T05:41:38.467Z",
+      "registrationMode": "agent",
+      "agentTargets": [
+        "claude"
+      ]
+    },
+    {
+      "id": "eab2c18c-1077-4c35-b01e-855c9ef4428b",
+      "name": "Build Engineer Assistant",
+      "slug": "build-engineer-assistant",
+      "description": "Builds the human-approved and QA-validated React Todo enhancement by validating dependencies, executing the project build, generating the required build scripts and deployable artifact, and preparing a build report before requesting Human Approval for Deployment.",
+      "project": "abirami_ravichandran@epam.com",
+      "registeredAt": "2026-08-11T05:41:38.469Z",
+      "registrationMode": "agent",
+      "agentTargets": [
+        "claude"
+      ]
+    },
+    {
+      "id": "6151f645-c8c3-4cde-a5e0-68b490a49b0b",
+      "name": "QA Automation Assistant",
+      "slug": "qa-automation-assistant",
+      "description": "Validates the human-approved React Todo enhancement by generating Gherkin scenarios, implementing Playwright automation, executing the tests, producing test evidence and reports, and documenting defects before requesting Human Approval for Build.",
+      "project": "abirami_ravichandran@epam.com",
+      "registeredAt": "2026-08-11T05:41:38.470Z",
+      "registrationMode": "agent",
+      "agentTargets": [
+        "claude"
+      ]
+    },
+    {
+      "id": "e3b65522-6ac5-454d-97a7-ec999ffc0578",
+      "name": "Code Review Assistant",
+      "slug": "code-review-assistant",
+      "description": "Reviews the implemented React Todo enhancement against approved Jira requirements and Solution Design, identifies defects, security and maintainability issues, prepares Pull Request review comments, and pauses for Human Approval before Testing.",
+      "project": "abirami_ravichandran@epam.com",
+      "registeredAt": "2026-08-11T05:41:38.472Z",
+      "registrationMode": "agent",
+      "agentTargets": [
+        "claude"
+      ]
+    },
+    {
+      "id": "a1f51577-b79b-4026-a6a5-84f4e4246b0d",
+      "name": "Developer Assistant",
+      "slug": "developer-assistant",
+      "description": "Implements the human-approved solution design for the React Todo enhancement using Claude Code CLI through CodeMie, updates the application code and build configuration, commits changes to Git, and prepares a Pull Request for Human Approval before Code Review.",
+      "project": "abirami_ravichandran@epam.com",
+      "registeredAt": "2026-08-11T05:41:38.473Z",
+      "registrationMode": "agent",
+      "agentTargets": [
+        "claude"
+      ]
+    },
+    {
+      "id": "5c6e879e-bcb3-4b3b-ba7a-7de4752d560d",
+      "name": "Solution Architect Assistant",
+      "slug": "solution-architect-assistant",
+      "description": "Transforms the human-approved Jira requirements and implementation plan for the React Todo enhancement into a complete technical solution including architecture, HLD, LLD, component and sequence designs, API and data design, and wireframe specifications, then pauses for Human Approval before development.",
+      "project": "abirami_ravichandran@epam.com",
+      "registeredAt": "2026-08-11T05:41:38.474Z",
+      "registrationMode": "agent",
+      "agentTargets": [
+        "claude"
+      ]
+    },
+    {
+      "id": "ff94dfb3-6d39-41ce-b3b3-3fee5296b361",
+      "name": "Project Planner Assistant",
+      "slug": "project-planner-assistant",
+      "description": "Creates an implementation-ready Agile project plan from human-approved Jira requirements, including sprint goals, backlog, WBS, tasks, dependencies, milestones, estimates, timeline, and risks, then pauses for Human Approval before Solution Architecture.",
+      "project": "abirami_ravichandran@epam.com",
+      "registeredAt": "2026-08-11T05:41:38.475Z",
+      "registrationMode": "agent",
+      "agentTargets": [
+        "claude"
+      ]
+    },
+    {
+      "id": "ef7e20fd-d16e-4f99-b90a-ecfdd9d25a04",
+      "name": "Requirement & Jira Assistant",
+      "slug": "requirement-jira-assistant",
+      "description": "Transforms a human-approved business enhancement into implementation-ready Agile requirements and creates the corresponding Epic, User Stories, and Tasks in Jira with Human-in-the-Loop approval.",
+      "project": "abirami_ravichandran@epam.com",
+      "registeredAt": "2026-08-11T05:41:38.476Z",
+      "registrationMode": "agent",
+      "agentTargets": [
+        "claude"
+      ]
+    },
+    {
+      "id": "6afc4fcc-2142-481f-bdcb-0cc67a5e6e21",
+      "name": "Business Analyst Assistant",
+      "slug": "business-analyst-assistant",
+      "description": "Analyzes the existing React Todo application, identifies business gaps, recommends enhancements, generates Agile requirements, and pauses for Human Approval before proceeding to planning.",
+      "project": "abirami_ravichandran@epam.com",
+      "registeredAt": "2026-08-11T05:41:38.477Z",
+      "registrationMode": "agent",
+      "agentTargets": [
+        "claude"
+      ]
+    }
+  ]
+}

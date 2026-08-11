@@ -27,12 +27,12 @@ function App() {
         },
     ];
 
-    const [listTasks, setListTasks] = useState(() => {
-        const persisted = loadTodosFromStorage();
-        return Array.isArray(persisted) ? persisted : todoData;
-    });
-    const [showListTasks, setShowListTasks] = useState([]);
-    const [modeSort, setModeSort] = useState('All');
+  const [listTasks, setListTasks] = useState(() => {
+    const persisted = loadTodosFromStorage();
+    return Array.isArray(persisted) ? persisted : todoData;
+  });
+  const [showListTasks, setShowListTasks] = useState([]);
+  const [modeSort, setModeSort] = useState('All');
 
     const handleSubmit = (task) => {
         setListTasks([
@@ -73,13 +73,13 @@ function App() {
         );
     };
 
-    const handleSortList = (mode) => {
-        setModeSort(mode);
-    };
+  const handleSortList = (mode) => {
+    setModeSort(mode);
+  }
 
-    useEffect(() => {
-        saveTodosToStorage(listTasks);
-    }, [listTasks]);
+  useEffect(() => {
+    saveTodosToStorage(listTasks);
+  }, [listTasks]);
 
     useEffect(() => {
         if (modeSort === 'All') {

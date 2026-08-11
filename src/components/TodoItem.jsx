@@ -8,6 +8,13 @@ import DialogTodoItem from './DialogTodoItem';
 const Task = ( { task, deleteHandler, checkHandler, editeHandler } ) => {
     const [openEdit, setOpenEdit] = useState(false);
 
+    const formatDeadline = (deadline) => {
+        if (!deadline) return 'No deadline';
+        if (!dayjs.isDayjs(deadline)) return 'No deadline';
+        if (!deadline.isValid()) return 'No deadline';
+        return deadline.format('MMM D, YYYY h:mm A');
+    };
+
     return(
         <div className="flex items-center  justify-between bg-white rounded-md px-3 w-full my-2 py-4 shadow-sm">
             <button onClick={() => checkHandler(task)} >
