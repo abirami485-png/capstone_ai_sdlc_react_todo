@@ -26,7 +26,11 @@ const Task = ( { task, deleteHandler, checkHandler, editeHandler } ) => {
                     className={`text-gray-700 font-medium ${task.status && 'line-through'} `} >
                         {task.title}
                 </span>
-                <span className="text-xs text-gray-700">{formatDeadline(task.deadline)}</span>
+                <span className="text-xs text-gray-700">
+                    {task.deadline && dayjs.isDayjs(task.deadline) && task.deadline.isValid()
+                        ? task.deadline.$d.toLocaleString()
+                        : 'No deadline'}
+                </span>
             </div>
             <div className="">
                 <button onClick={() => deleteHandler(task._id)}
